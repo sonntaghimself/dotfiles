@@ -19,7 +19,41 @@
           pkgs.mkalias
           pkgs.neovim
           pkgs.R
+          pkgs.wget
+          pkgs.lsd
+          pkgs.lazygit
         ];
+
+      homebrew = {
+          enable = true;
+          casks = [];
+          onActivation.cleanup = "zap";
+        };
+
+      fonts.packages = [
+          (pkgs.nerdfonts.override { fonts = ["JetBrainsMono"]; })
+        ];
+
+      # NOTE: Doesn't work.
+      system.activationScripts.applications.text = let
+        env = pkgs.buildEnv {
+          name = "system-applications";
+          paths = config.environment.systemPackages;
+          pathsToLink = "/Applications";
+        };
+      in
+        pkgs.lib.mkForce ''
+        # Set up applications.
+        echo "setting up /Applications..." >&2
+        rm -rf /Applications/Nix\ Apps
+        mkdir -p /Applications/Nix\ Apps
+        find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
+        while read src; do
+          app_name=$(basename "$src")
+          echo "copying $src" >&2
+          ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
+        done
+            '';
 
       # Auto upgrade nix package and the daemon service.
       services.nix-daemon.enable = true;
@@ -47,8 +81,8 @@
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#simple
     darwinConfigurations."mac" = nix-darwin.lib.darwinSystem {
-      modules = [ 
-      configuration 
+      modules = [
+      configuration
       nix-homebrew.darwinModules.nix-homebrew{
           nix-homebrew = {
             # Install Homebrew under the default prefix
@@ -61,7 +95,7 @@
             user = "sonntaghimself";
 
             # Automatically migrate existing Homebrew installations
-            autoMigrate = true;
+            # autoMigrate = true;
           };
         }
       ];
