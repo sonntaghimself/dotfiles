@@ -1,0 +1,41 @@
+# import = ["/Users/sonntaghimself/.config/alacritty/themes/melange_dark.toml"]
+# import = ["/Users/sonntaghimself/.config/alacritty/themes/themes/gruvbox_dark.yaml"]
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+# draw_bold_text_with_bright_colors = true
+size = 20
+
+[font.bold]
+family = "Lekton Nerd Font Mono"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Lekton Nerd Font Mono"
+
+[font.normal]
+family = "Lekton Nerd Font Mono"
+
+[font.offset]
+x = 0
+y = 0
+
+[window]
+decorations = "buttonless"
+startup_mode = "Windowed"
+
+[window.padding]
+x = 5
+y = 5
+
+[general]
+import = ["/Users/sonntaghimself/.config/alacritty/themes/themes/tokyonight_moon.toml"]

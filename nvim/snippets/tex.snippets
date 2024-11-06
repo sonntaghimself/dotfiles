@@ -1,0 +1,211 @@
+snippet ra "rightarrow"
+  \$\rightarrow$ ${0}
+
+snippet eql Labeled equation environment
+  \\begin{equation}
+    \\label{eq:${2}}
+    ${0:${VISUAL}}
+  \\end{equation}
+
+snippet lra "longrightarrow"
+  \$\longrightarrow$ ${0}
+
+snippet knenv "knitr code"
+  <<echo=${1:FALSE}, cache=${2:TRUE}, include=${3:FALSE}>>=
+  ${0}
+  @
+
+snippet hea "A header"
+  \\underline{\textbf{$0}}
+
+snippet gr "Graphic"
+  \\begin{${1:center, flushleft or flushright}}
+  	\\includegraphics[width=\textwidth]{${0:graphic name}}%
+		\\captionsettings{width=\textwidth}
+		\\caption{$2}%
+		\\label{fig:$2}
+  \\end{$1}
+
+snippet twof "Two figures Side by side"
+  \\begin{figure}
+  	\\begin{subfigure}[h]{0.45\linewidth}
+  		\\includegraphics[width=\linewidth]{example-image-a}
+  		\\caption{}%
+  		\\label{subfig:}
+  	\\end{subfigure}
+  	\\hfill
+  	\\begin{subfigure}[h]{0.45\linewidth}
+  		\\includegraphics[width=\linewidth]{example-image-b}
+  		\\caption{Accuracy}%
+  		\\label{subfig:}
+  	\\end{subfigure}%
+  	\\caption{}
+  \\end{figure}
+
+snippet fbox "framed box, as wide as the text"
+  \\begin{center}
+  \\fbox{\begin{varwidth}{\textwidth}
+  \\centering
+  ${0}
+  \\end{varwidth}}
+  \\end{center}
+
+snippet cl "Text in colour"
+  \{\color{${1:colour name}}{$0}}
+
+snippet wfi "wrap text around a figure"
+  \\begin{wrapfigure}{l}{${1:0.5}\textwidth}
+    \\centering
+    \\includegraphics[width=0.95\linewidth]{${2:figure name}}
+    \\caption{${3:some text}}%
+    \\label{fig:${4:$3}}
+  \\end{wrapfigure}
+  ${0}
+
+snippet bu "making a bullet without itemize"
+  \$\bullet$ ${0}
+
+snippet Ra "nicer Doppelpfeil"
+  \$\Rightarrow$ ${0}
+
+snippet hook "hookrightarrow"
+  \$\hookrightarrow$ ${0}
+
+snippet map "mapsto"
+  \$\mapsto$ ${0}
+
+snippet deg "degree symbol"
+  \$^\circ$ ${0}
+
+snippet clr "writing in colour"
+  {\color{${1:colour}}{$2}} ${0}
+
+snippet rharp "rightharpoonup"
+  \$\rightharpoonup$ ${0}
+
+snippet lharp "leftharpoonup"
+  \$\leftharpoonup$ ${0}
+
+snippet rlharp "rightleftharpoon"
+  \$\rightleftharpoons$ ${0}
+
+snippet tamc "insert a multicolumn into table"
+  \\multicolumn{${1:how many columns?}}{${2:alignment}}{${0:text}}
+
+snippet ct "cite in text; bibtex"
+  \\textcite{$0}
+
+snippet cp "cite in parenthesis; bibtex"
+  \\parencite[][]{$0}
+
+snippet cy "cite year; bibtex"
+  \\citeyear{$0}
+
+snippet ca "cite author; bibtex"
+  \\citeauthor{$0}
+
+snippet Se "R expression"
+  \\Sexpr{$0}
+
+snippet -- "arrow"
+  \ <- {$0}
+
+snippet br "amsmath Bracket"
+  \\left(${0}\right)
+
+snippet nstr "numberstring; for counter values"
+  \\numberstring{$0}
+
+snippet strn "numberstring; for actual numbers"
+  \\numberstringnum{$0}
+
+snippet lta "longtable; acutally works with apa"
+  \\begin{longtable}{${1}}%
+    \\label{tab:${2}}
+    \\caption{${3}}\\
+    \\hline
+    ${0}
+    \\hline
+  \\end{longtable}
+
+snippet Fo "Folie"
+  \\underline{Folie ${1}:}\\\
+  ${0}
+  \\\
+
+snippet mi "minipage"
+  \\begin{minipage}{${1}\linewidth}
+    ${0}
+  \\end{minipage}
+  \{\captionof{}{}}%
+  \\label{}
+
+snippet on "On which slide should this be displayed"
+  \\onslide<${1}->{
+    ${0}
+  }
+
+snippet oy "On which slide should this only be displayed"
+  \\only<${1}>{
+    ${0}
+  }
+
+snippet pe "p-Value"
+  \\textit{p} = .${0}
+
+snippet ps "p-Value"
+  \\textit{p} $<$ .${0}
+
+snippet fa "Fraction that is aligned like a tab"
+  \\begin{flalign*}
+    ${0}
+  \\end{flalign*}
+
+snippet tpt "threeparttable for apa documents"
+  \\begin{table}[htpb]
+    \\centering
+    % \\setlength{\tabcolsep}{10pt} % Default value: 6pt
+    \\renewcommand{\arraystretch}{1.5} % Default value: 1
+    \\begin{threeparttable}
+      \\caption{${1}}%
+      \\label{tab:${2}}
+      \\begin{tabular}{@{}${3}@{}}
+      \\toprule
+      ${0}
+      \\midrule
+      \\bottomrule
+      \\end{tabular}
+      \\vspace*{.25cm}
+      \\tablenote{}
+    \\end{threeparttable}
+  \\end{table}
+
+snippet under "Underline text"
+  \\underline{${0}}
+
+snippet enq "Enquote text"
+  \\enquote{${0}}
+
+snippet * "italic"
+	\\textit{${0}}
+
+snippet ** "bold"
+	\\textbf{${0}}
+
+snippet *** "under"
+	\\underline{${0}}
+
+snippet reffig "reference to a figure"
+ 	Figure~\ref{fig:${0}}
+
+snippet refsubfig "reference to a figure"
+ 	Figure~\ref{subfig:${0}}
+
+snippet reftab "reference to a table"
+ 	Table~\ref{tab:${0}}
+
+snippet refsec "reference to a section"
+ 	Section~\ref{sec:${0}}
+
+# snippet sec "an actual section"
+# 	\\section{}
