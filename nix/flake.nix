@@ -20,14 +20,17 @@
           pkgs.neovim
           pkgs.R
           pkgs.wget
-          pkgs.lsd
+          # pkgs.lsd
           pkgs.lazygit
+          pkgs.fzf
         ];
 
       homebrew = {
           enable = true;
           casks = [];
           onActivation.cleanup = "zap";
+          onActivation.autoUpdate = true;
+          onActivation.upgrade = true;
         };
 
       fonts.packages = [

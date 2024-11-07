@@ -33,12 +33,14 @@ x = 0
 y = 0
 
 [window]
-decorations = "buttonless"
-startup_mode = "Windowed"
+# decorations = "buttonless"
+# startup_mode = "Windowed"
 
 [window.padding]
 x = 5
 y = 5
 
 [general]
-import = ["/Users/sonntaghimself/.config/alacritty/themes/themes/tokyonight_moon.toml"]
+import = [
+  "/Users/sonntaghimself/.config/alacritty/themes/themes/tokyonight_moon.toml",
+]
