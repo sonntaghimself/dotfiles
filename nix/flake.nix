@@ -22,6 +22,7 @@
           pkgs.lazygit
           pkgs.fzf
           pkgs.gcc
+          pkgs.ffmpeg
           # pkgs.pyenv
           # pkgs.pyenv-virtualenv
           # pkgs.lsd
