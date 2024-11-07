@@ -24,10 +24,7 @@
           pkgs.gcc
           pkgs.ffmpeg
           pkgs.zoxide
-          # pkgs.pyenv
-          # pkgs.pyenv-virtualenv
           # pkgs.lsd
-          # pkgs.R
         ];
 
       homebrew = {
