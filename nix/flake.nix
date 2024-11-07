@@ -21,6 +21,7 @@
           pkgs.wget
           pkgs.lazygit
           pkgs.fzf
+          pkgs.gcc
           # pkgs.pyenv
           # pkgs.pyenv-virtualenv
           # pkgs.lsd
@@ -30,11 +31,14 @@
       homebrew = {
           enable = true;
           casks = [
+            # "R-app"
           ];
           brews = [
-            "R"
+            "npm"
             "pyenv"
             "pyenv-virtualenv"
+            # NOTE: The following package is needed to get R running.
+            "gettext"
           ];
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
