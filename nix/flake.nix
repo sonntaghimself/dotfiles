@@ -18,16 +18,24 @@
           pkgs.alacritty
           pkgs.mkalias
           pkgs.neovim
-          pkgs.R
           pkgs.wget
-          # pkgs.lsd
           pkgs.lazygit
           pkgs.fzf
+          # pkgs.pyenv
+          # pkgs.pyenv-virtualenv
+          # pkgs.lsd
+          # pkgs.R
         ];
 
       homebrew = {
           enable = true;
-          casks = [];
+          casks = [
+          ];
+          brews = [
+            "R"
+            "pyenv"
+            "pyenv-virtualenv"
+          ];
           onActivation.cleanup = "zap";
           onActivation.autoUpdate = true;
           onActivation.upgrade = true;
