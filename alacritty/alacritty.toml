@@ -1,6 +1,3 @@
-# import = ["/Users/sonntaghimself/.config/alacritty/themes/melange_dark.toml"]
-# import = ["/Users/sonntaghimself/.config/alacritty/themes/themes/gruvbox_dark.yaml"]
-
 [cursor]
 style = "Block"
 unfocused_hollow = true
@@ -45,10 +42,12 @@ startup_mode = "Maximized"
 # startup_mode = "Windowed"
 
 [window.padding]
-x = 5
-y = 5
+x = 4
+y = 4
 
 [general]
 import = [
   "/Users/sonntaghimself/.config/alacritty/themes/themes/tokyonight_moon.toml",
 ]
+# import = ["/Users/sonntaghimself/.config/alacritty/themes/melange_dark.toml"]
+# import = ["/Users/sonntaghimself/.config/alacritty/themes/themes/gruvbox_dark.yaml"]
