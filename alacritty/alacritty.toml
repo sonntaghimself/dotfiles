@@ -34,7 +34,8 @@ y = 0
 
 [window]
 # My New ones
-decorations = "full"
+# decorations = "full"
+decorations = "buttonless"
 dynamic_title = true
 startup_mode = "Maximized"
 # My old ones
