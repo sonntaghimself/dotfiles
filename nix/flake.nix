@@ -25,13 +25,12 @@
           pkgs.ffmpeg
           pkgs.zoxide
           pkgs.live-server
-          # pkgs.lsd
+          pkgs.texliveFull
         ];
 
       homebrew = {
           enable = true;
           casks = [
-            # "R-app"
           ];
           brews = [
             "npm"
