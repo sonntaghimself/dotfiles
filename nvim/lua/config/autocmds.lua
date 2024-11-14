@@ -3,6 +3,9 @@ vim.api.nvim_create_autocmd(
   { pattern = { "*.rnw" }, command = ":set filetype=tex" }
 )
 
+-- Hacky Ubun2 Syntax fix
+-- vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile", "BufEnter" }, { pattern = { "*.rnw" }, command = ":e" })
+
 vim.api.nvim_create_autocmd(
   { "BufRead", "BufNewFile", "BufEnter" },
   { pattern = { "*.tex", "*.rnw" }, command = ":set spelllang=en_us" }

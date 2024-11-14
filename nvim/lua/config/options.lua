@@ -19,6 +19,9 @@ vim.g.cmdline_app = { python = "ipython" }
 vim.api.nvim_command("let g:cmdline_map_start = '<leader>s'")
 vim.api.nvim_command("let g:cmdline_map_send = '<return>'")
 
+-- Don't treat .rnw as an R filetype
+vim.g.R_filetypes = { "r" }
+
 vim.api.nvim_command("let g:vimtex_view_method = 'skim'")
 vim.api.nvim_command("let g:vimtex_compiler_latexmk = {'aux_dir' : '../AuxFiles/', 'out_dir' : '../', 'continuous': 1}")
 
