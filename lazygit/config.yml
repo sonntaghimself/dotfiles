@@ -1,29 +1,54 @@
 gui:
   nerdFontsVersion: "3" # This makes it not look buggy; default seems to be 2
   showIcons: true # should be default
-  ############### Tokyonight_moon ################
+
+  #   ############### Tokyonight_moon ################
+  #   theme:
+  #     activeBorderColor:
+  #       - "#ff966c"
+  #       - "bold"
+  #     inactiveBorderColor:
+  #       - "#589ed7"
+  #     searchingActiveBorderColor:
+  #       - "#ff966c"
+  #       - "bold"
+  #     optionsTextColor:
+  #       - "#82aaff"
+  #     selectedLineBgColor:
+  #       - "#2d3f76"
+  #     cherryPickedCommitFgColor:
+  #       - "#82aaff"
+  #     cherryPickedCommitBgColor:
+  #       - "#c099ff"
+  #     markedBaseCommitFgColor:
+  #       - "#82aaff"
+  #     markedBaseCommitBgColor:
+  #       - "#ffc777"
+  #     unstagedChangesColor:
+  #       - "#c53b53"
+  #     defaultFgColor:
+  #       - "#c8d3f5"
+
+  ############### Catpuccin Frappe ################
   theme:
     activeBorderColor:
-      - "#ff966c"
-      - "bold"
+      - "#8caaee"
+      - bold
     inactiveBorderColor:
-      - "#589ed7"
-    searchingActiveBorderColor:
-      - "#ff966c"
-      - "bold"
+      - "#a5adce"
     optionsTextColor:
-      - "#82aaff"
+      - "#8caaee"
     selectedLineBgColor:
-      - "#2d3f76"
-    cherryPickedCommitFgColor:
-      - "#82aaff"
+      - "#414559"
     cherryPickedCommitBgColor:
-      - "#c099ff"
-    markedBaseCommitFgColor:
-      - "#82aaff"
-    markedBaseCommitBgColor:
-      - "#ffc777"
+      - "#51576d"
+    cherryPickedCommitFgColor:
+      - "#8caaee"
     unstagedChangesColor:
-      - "#c53b53"
+      - "#e78284"
     defaultFgColor:
-      - "#c8d3f5"
+      - "#c6d0f5"
+    searchingActiveBorderColor:
+      - "#e5c890"
+  authorColors:
+    "*": "#babbf1"
