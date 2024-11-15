@@ -24,7 +24,6 @@
           pkgs.gcc
           pkgs.ffmpeg
           pkgs.zoxide
-          pkgs.live-server
           pkgs.texliveFull
         ];
 
