@@ -48,7 +48,11 @@ y = 10
 
 [general]
 import = [
-  "/Users/sonntaghimself/.config/alacritty/themes/themes/tokyonight_moon.toml",
+  "/Users/sonntaghimself/.config/alacritty/themes/themes/one_dark.toml",
+  # "/Users/sonntaghimself/.config/alacritty/themes/themes/catppuccin_macchiato.toml",
+  # "/Users/sonntaghimself/.config/alacritty/themes/themes/catppuccin_frappe.toml",
+  # "/Users/sonntaghimself/.config/alacritty/themes/themes/catppuccin_mocha.toml",
+  # "/Users/sonntaghimself/.config/alacritty/themes/themes/tokyonight_moon.toml",
+  # "/Users/sonntaghimself/.config/alacritty/themes/melange_dark.toml",
+  # "/Users/sonntaghimself/.config/alacritty/themes/themes/gruvbox_dark.yaml",
 ]
-# import = ["/Users/sonntaghimself/.config/alacritty/themes/melange_dark.toml"]
-# import = ["/Users/sonntaghimself/.config/alacritty/themes/themes/gruvbox_dark.yaml"]
