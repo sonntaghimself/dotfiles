@@ -6,7 +6,7 @@ return {
     assignment_keymap = "--",
     pipe_keymap = ",,",
     pipe_version = "magrittr",
-    rconsole_width = 70,
+    rconsole_width = 80,
     min_editor_width = 50,
   },
 }
