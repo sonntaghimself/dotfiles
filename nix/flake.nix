@@ -15,7 +15,7 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-          pkgs.alacritty
+          # pkgs.alacritty
           pkgs.mkalias
           pkgs.neovim
           pkgs.wget
@@ -25,14 +25,19 @@
           pkgs.ffmpeg
           pkgs.zoxide
           pkgs.texliveFull
+          pkgs.eza
         ];
 
       homebrew = {
           enable = true;
           casks = [
+            # "wezterm"
+            # "kitty" # Nah for now, seems intersting though
+            "alacritty"
           ];
           brews = [
             "npm"
+            "pkgconf"
             "pyenv"
             "pyenv-virtualenv"
             # NOTE: The following package is needed to get R running.

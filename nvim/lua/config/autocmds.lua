@@ -6,14 +6,11 @@ vim.api.nvim_create_autocmd(
 -- Hacky Ubun2 Syntax fix
 -- vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile", "BufEnter" }, { pattern = { "*.rnw" }, command = ":e" })
 
-vim.api.nvim_create_autocmd(
-  { "BufRead", "BufNewFile", "BufEnter" },
-  { pattern = { "*.tex", "*.rnw" }, command = ":set spelllang=en_us" }
-)
+-- vim.api.nvim_create_autocmd({ "BufLeave" }, { pattern = { "*.r" }, command = ":RKill | :q" })
 
 vim.api.nvim_create_autocmd(
   { "BufRead", "BufNewFile", "BufEnter" },
-  { pattern = { "*.tex", "*.rnw" }, command = ":set spell" }
+  { pattern = { "*.tex", "*.rnw" }, command = ":set spell | :set spelllang=en_us" }
 )
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile", "BufEnter" }, { command = ":silent! %foldclose!" })
@@ -37,7 +34,7 @@ if file then
 
   contents = contents:match("^%s*(.-)%s*$")
   vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile", "BufEnter" }, {
-    pattern = { "*.tex", "*.Rnw", "*.txt" },
+    pattern = { "*.tex", "*.Rnw", "*.txt", "*.md" },
     command = ":set spelllang=" .. contents,
   })
 end
