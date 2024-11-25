@@ -2,6 +2,7 @@ colourful: true
 
 filekinds:
   normal: { foreground: "#BAC2DE" }
+  # normal: { foreground: "#F5C2E7" }
   directory: { foreground: "#89B4FA" }
   symlink: { foreground: "#89DCEB" }
   pipe: { foreground: "#7F849C" }
@@ -86,7 +87,8 @@ file_type:
   temp: { foreground: "#EBA0AC" }
   compiled: { foreground: "#74C7EC" }
   build: { foreground: "#585B70" }
-  source: { foreground: "#89B4FA" }
+  # source: { foreground: "#89B4FA" }
+  source: { foreground: "#BAC2DE" }
 
 punctuation: { foreground: "#7F849C" }
 date: { foreground: "#F9E2AF" }
@@ -96,8 +98,7 @@ header: { foreground: "#CDD6F4" }
 octal: { foreground: "#94E2D5" }
 flags: { foreground: "#CBA6F7" }
 
-symlink_path: { foreground: "#89DCEB" }
+symlink_path: { foreground: "#F5C2E7" }
 control_char: { foreground: "#74C7EC" }
 broken_symlink: { foreground: "#F38BA8" }
 broken_path_overlay: { foreground: "#585B70" }
-
