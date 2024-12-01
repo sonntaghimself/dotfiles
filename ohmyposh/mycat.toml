@@ -17,6 +17,7 @@ green = "#a6d189"
 teal = "#81c8be"
 sky = "#99d1db"
 sapphire = "#85c1dc"
+faded = "#51576d"
 
 [[blocks]]
 alignment = "left"
@@ -33,17 +34,19 @@ home_icon = "~"
 style = "agnoster_full"
 
 [[blocks.segments]]
-foreground = "p:lavender"
+# foreground = "p:lavender"
+foreground = "p:faded"
 template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
 style = "plain"
 type = "git"
 
 [blocks.segments.properties]
 branch_icon = " "
+# branch_icon = ""
 cherry_pick_icon = " "
 commit_icon = " "
-fetch_status = false
-fetch_upstream_icon = false
+fetch_status = true
+# fetch_upstream_icon = false # No idea what this does
 merge_icon = " "
 no_commits_icon = " "
 rebase_icon = " "
