@@ -1,0 +1,93 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+final_space = true
+version = 3
+
+[palette]
+os = "#ACB0BE"
+closer = "p:os"
+pink = "#F4B8E4"
+lavender = "#BABBF1"
+blue = "#8CAAEE"
+yellow = "#E5C890"
+peach = "#ef9f76"
+rosewater = "#f2d5cf"
+red = "#e78284"
+maroon = "#ea999c"
+green = "#a6d189"
+teal = "#81c8be"
+sky = "#99d1db"
+sapphire = "#85c1dc"
+
+[[blocks]]
+alignment = "left"
+type = "prompt"
+
+[[blocks.segments]]
+foreground = "p:pink"
+style = "plain"
+template = "{{ .Path }} "
+type = "path"
+
+[blocks.segments.properties]
+home_icon = "~"
+style = "agnoster_full"
+
+[[blocks.segments]]
+foreground = "p:lavender"
+template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+style = "plain"
+type = "git"
+
+[blocks.segments.properties]
+branch_icon = " "
+cherry_pick_icon = " "
+commit_icon = " "
+fetch_status = false
+fetch_upstream_icon = false
+merge_icon = " "
+no_commits_icon = " "
+rebase_icon = " "
+revert_icon = " "
+tag_icon = " "
+
+[[blocks]]
+type = 'rprompt'
+overflow = 'hidden'
+
+[[blocks.segments]]
+type = 'executiontime'
+style = 'plain'
+foreground = 'p:yellow'
+background = 'transparent'
+template = '{{ .FormattedMs }}'
+
+[blocks.segments.properties]
+threshold = 5000
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+type = 'text'
+style = 'plain'
+foreground_templates = [
+  "{{if gt .Code 0}}red{{end}}",
+  "{{if eq .Code 0}}magenta{{end}}",
+]
+background = 'transparent'
+template = '❯'
+
+[transient_prompt]
+foreground_templates = [
+  "{{if gt .Code 0}}red{{end}}",
+  "{{if eq .Code 0}}magenta{{end}}",
+]
+background = 'transparent'
+template = '❯ '
+
+[secondary_prompt]
+foreground = 'magenta'
+background = 'transparent'
+template = '❯❯ '
