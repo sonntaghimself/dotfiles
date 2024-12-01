@@ -7,6 +7,15 @@ vim.opt.colorcolumn = "80"
 vim.opt.textwidth = 78
 vim.tex_flavour = "latex"
 
+vim.g.vimtex_compiler_latexmk = {
+  options = {
+    "-gg",
+    "-pdf",
+    '-pdflatex="pdflatex %O %S"',
+    "-shell-escape",
+  },
+}
+
 vim.g.python3_host_prog = "/Users/sonntaghimself/.pyenv/shims/python3"
 vim.g.python_host_prog = "/Users/sonntaghimself/.pyenv/shims/python"
 -- let g:python_host_prog = $HOME.'/.virtualenvs/neovim2-[pipenv garbage]/bin/python'

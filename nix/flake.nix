@@ -26,6 +26,8 @@
           pkgs.zoxide
           pkgs.texliveFull
           pkgs.eza
+          pkgs.oh-my-posh
+          # pkgs.tmux # TODO: Retry and reconfigure
         ];
 
       homebrew = {
