@@ -24,7 +24,8 @@ alignment = "left"
 type = "prompt"
 
 [[blocks.segments]]
-foreground = "p:pink"
+# foreground = "p:pink"
+foreground = "p:blue"
 style = "plain"
 template = "{{ .Path }} "
 type = "path"
@@ -60,7 +61,8 @@ overflow = 'hidden'
 [[blocks.segments]]
 type = 'executiontime'
 style = 'plain'
-foreground = 'p:yellow'
+# foreground = 'p:yellow'
+foreground = "p:blue"
 background = 'transparent'
 template = '{{ .FormattedMs }}'
 

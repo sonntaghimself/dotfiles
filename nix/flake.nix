@@ -36,6 +36,7 @@
             # "wezterm"
             # "kitty" # Nah for now, seems intersting though
             "alacritty"
+            "nikitabobko/tap/aerospace"
             # "r"
           ];
           brews = [
