@@ -1,6 +1,6 @@
 vim.api.nvim_create_autocmd(
   { "BufRead", "BufNewFile", "BufEnter" },
-  { pattern = { "*.rnw" }, command = ":set filetype=tex" }
+  { pattern = { "*.rnw", "*.rtex" }, command = ":set filetype=tex" }
 )
 
 -- Hacky Ubun2 Syntax fix
@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd(
 
 vim.api.nvim_create_autocmd(
   { "BufRead", "BufNewFile", "BufEnter" },
-  { pattern = { "*.tex", "*.rnw" }, command = ":set spell | :set spelllang=en_us" }
+  { pattern = { "*.tex", "*.rnw", "*.rtex" }, command = ":set spell | :set spelllang=en_us" }
 )
 
 vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile", "BufEnter" }, { command = ":silent! %foldclose!" })
@@ -34,7 +34,7 @@ if file then
 
   contents = contents:match("^%s*(.-)%s*$")
   vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile", "BufEnter" }, {
-    pattern = { "*.tex", "*.Rnw", "*.txt", "*.md" },
+    pattern = { "*.tex", "*.rnw", "*.rtex", "*.txt", "*.md" },
     command = ":set spelllang=" .. contents,
   })
 end

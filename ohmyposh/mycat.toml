@@ -62,7 +62,7 @@ overflow = 'hidden'
 type = 'executiontime'
 style = 'plain'
 # foreground = 'p:yellow'
-foreground = "p:blue"
+foreground = "p:maroon"
 background = 'transparent'
 template = '{{ .FormattedMs }}'
 
