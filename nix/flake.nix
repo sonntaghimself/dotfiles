@@ -26,7 +26,7 @@
           pkgs.zoxide
           pkgs.texliveFull
           pkgs.eza
-          pkgs.oh-my-posh
+          # pkgs.oh-my-posh # Doesn't offer newest version. brew does.
           # pkgs.tmux # TODO: Retry and reconfigure
         ];
 
@@ -36,14 +36,16 @@
             # "wezterm"
             # "kitty" # Nah for now, seems intersting though
             "alacritty"
-            "nikitabobko/tap/aerospace"
+            # "nikitabobko/tap/aerospace"
             # "r"
+            "keymapp"
           ];
           brews = [
             "npm"
             "pkgconf"
             "pyenv"
             "pyenv-virtualenv"
+            "oh-my-posh"
             # NOTE: The following package is needed to get R running.
             "gettext"
           ];
