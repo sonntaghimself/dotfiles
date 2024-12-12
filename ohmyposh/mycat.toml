@@ -55,6 +55,19 @@ revert_icon = " "
 tag_icon = " "
 
 [[blocks]]
+type = 'prompt'
+overflow = 'hide'
+alignment = 'right'
+
+[[blocks.segments]]
+type = "python"
+style = 'plain'
+foreground = 'p:maroon'
+background = 'transparent'
+# template = ' {{ .Venv }}'
+template = '{{ .Venv }}'
+
+[[blocks]]
 type = 'rprompt'
 overflow = 'hidden'
 
