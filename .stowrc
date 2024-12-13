@@ -1,0 +1,6 @@
+--target=~/.config
+--ignore=.stowrc
+--ignore=nix
+--ignore=DS_Store
+--dotfiles
+--D

@@ -98,7 +98,7 @@ alias ls="eza --icons=never --color=auto"
 alias commit="git commit -m 'randomly committing the status quo'"
 alias comma="git add . && git commit -m 'randomly committing the status quo'"
 alias lg="lazygit"
-alias stow="stow  -D -d ~/.dotfiles . && stow -d ~/.dotfiles . && cp -r ~/.dotfiles/nix ~/.config/"
+# alias stow="stow  -D -d ~/.dotfiles . && stow -d ~/.dotfiles ."
 # obsolete through zoxide
 # alias work="cd ~/Documents/Work/"
 # alias neben="cd ~/Documents/Peops/MO/Neben"
