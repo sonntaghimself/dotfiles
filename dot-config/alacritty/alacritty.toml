@@ -13,15 +13,27 @@ size = 18
 
 [font.normal]
 # family = "Lekton Nerd Font Mono"
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+family = "AnonymicePro Nerd Font"
+# A bit much, but pretty
+# family = "0xProto Nerd Font"
+# family = "MonaspiceNe Nerd Font"
 
+# {{{ I never want these to differ ...
 [font.bold]
 # family = "Lekton Nerd Font Mono"
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+# family = "AnonymicePro Nerd Font"
+# family = "0xProto Nerd Font"
+# family = "0xProto Nerd Font"
 
 [font.italic]
 # family = "Lekton Nerd Font Mono"
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+# family = "AnonymicePro Nerd Font"
+# family = "0xProto Nerd Font"
+# family = "0xProto Nerd Font"
+# }}}
 
 [font.glyph_offset]
 x = 0

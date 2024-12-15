@@ -1,4 +1,4 @@
---target=~/.config
+--target=~/
 --ignore=.stowrc
 --ignore=nix
 --ignore=DS_Store
