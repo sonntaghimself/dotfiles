@@ -1,11 +1,21 @@
+# TODO: Isolate machine specific Configurations here; These will later be
+# conditionally sourced to make configs universal.
+
+################################################
+#                     MAC                      #
+################################################
 # Make brew applications available in path
 eval "$(/opt/homebrew/bin/brew shellenv)"
+export PKG_CONFIG=/opt/homebrew/bin/pkg-config
 
+################################################
+#                    Ubun2                     #
+################################################
+
+################################## General ###################################
 # R broke
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-# export LC_ALL=C
-export PKG_CONFIG=/opt/homebrew/bin/pkg-config
 
 # Pyenv setup
 export PYENV_ROOT="$HOME/.pyenv"
@@ -50,8 +60,6 @@ autoload -U compinit && compinit
 zinit cdreplay -q
 
 # oh-my-posh
-# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
-# eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/bubbles.json)"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/mycat.toml)"
 
 # accept autosuggestion
@@ -110,7 +118,7 @@ function main() {
   local mainFileRnw="main.rnw"
   local mainFileRtex="main.rtex"
   local mainFileTex="main.tex"
-  
+ 
   echo "Current directory: $PWD"
 
   if [[ -e "$mainFileRnw" ]]; then
