@@ -92,7 +92,7 @@ eval "$(zoxide init --cmd cd zsh)"
 
 ################### Aliases ####################
 alias zsh.conf="nvim ~/.dotfiles/dot-zshrc"
-alias alacritty.conf="nvim ~/.dotfiles/alacritty/alacritty.toml"
+alias alacritty.conf="nvim ~/.dotfiles/dot-config/alacritty/alacritty.toml"
 alias v="nvim"
 alias ls="eza --icons=never --color=auto"
 alias commit="git commit -m 'randomly committing the status quo'"
